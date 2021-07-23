@@ -1,3 +1,5 @@
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,12 +10,14 @@ import java.util.List;
  * @description
  */
 public class TheSumOfThreeNums_15 {
-    public static void main(String[] args) {
-        int[] nums = new int[] {0,1,1};
-        System.out.println(threeNums(nums));
+    @Test
+    public  void test() {
+        int[] nums = new int[] {-1,0,1,2,-1,-4};
+        System.out.println(threeSum(nums));
     }
 
-    public static List<List<Integer>> threeNums(int[] nums){
+
+    public  List<List<Integer>> threeSum(int[] nums){
         Arrays.sort(nums);
         int len = nums.length;
 
@@ -25,9 +29,9 @@ public class TheSumOfThreeNums_15 {
             }
             //初始右指针
             int right = len-1;
-            for (int left = i+1 ; left < len-1; left++) {
+            for (int left = i+1 ; left < right-1; left++) {
                 //如果当前数值和上一个相同，则继续加1
-                if((left>i+1)&&nums[left]==nums[left-1]){
+                if(left!=(i+1)&&nums[left]==nums[left-1]){
                     continue;
                 }
 
@@ -41,12 +45,9 @@ public class TheSumOfThreeNums_15 {
                 }
 
 
-                //保证左指针在右指针左边
-                if(left==right){
-                    break;
-                }
+
                 //如果相等，将数组加入到列表中
-                if((nums[i]+nums[left]+nums[right])==0){
+                if((nums[i]+nums[left]+nums[right])==0&&right>left){
                     list.add(Arrays.asList(nums[i],nums[left],nums[right]));
                 }
             }

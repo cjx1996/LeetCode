@@ -15,15 +15,11 @@ public class Find_Minimum_In_Rotated_Sorted_Array_153 {
         while (l < r) {
             int mid = (l + r) / 2;
             //当数组为有序列表时，直接跳出输出l即可
-            if (nums[l] < nums[r]) {
-                break;
-            }
-
-
-            if (mid == l) {
+            if (nums[l] <= nums[r]) {
                 return nums[l];
             }
-            if (nums[mid] > nums[l]) {
+
+            if (nums[mid] > nums[r]) {
                 l = mid + 1;
             } else {
                 r = mid;
@@ -35,7 +31,7 @@ public class Find_Minimum_In_Rotated_Sorted_Array_153 {
 
     @Test
     public void test() {
-        int[] nums = {3, 4, 5, 1, 2};
+        int[] nums = {11,13,15,17};
         int min = findMin(nums);
         System.out.println(min);
     }
