@@ -2,7 +2,7 @@ import org.junit.Test;
 
 /**
  * @ClassName Maximum_Element_After_Decreasing_and_Rearranging_1846
- * @Description TODO
+ * @Description
  * @Author cjx
  * @Date 2021/7/15 12:42
  * @Version 1.0

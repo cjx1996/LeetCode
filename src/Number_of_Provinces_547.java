@@ -2,7 +2,7 @@ import org.junit.Test;
 
 /**
  * @ClassName Number_of_Provinces_547
- * @Description TODO
+ * @Description
  * @Author cjx
  * @Date 2021/7/21 17:49
  * @Version 1.0

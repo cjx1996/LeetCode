@@ -2,7 +2,7 @@ import org.junit.Test;
 
 /**
  * @ClassName Target_Sum_494
- * @Description TODO
+ * @Description
  * @Author cjx
  * @Date 2021/6/7 10:59
  * @Version 1.0

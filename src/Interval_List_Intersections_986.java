@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * @ClassName Interval_List_Intersections_986
- * @Description TODO
+ * @Description
  * @Author cjx
  * @Date 2021/7/18 21:26
  * @Version 1.0

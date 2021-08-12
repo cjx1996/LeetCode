@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @ClassName Frequency_of_the_Most_Frequent_Element_1838
- * @Description TODO
+ * @Description
  * @Author cjx
  * @Date 2021/7/19 17:41
  * @Version 1.0

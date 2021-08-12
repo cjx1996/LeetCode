@@ -2,7 +2,7 @@ import org.junit.Test;
 
 /**
  * @ClassName Last_Stone_Weight_II_1049
- * @Description TODO
+ * @Description
  * @Author cjx
  * @Date 2021/6/8 22:51
  * @Version 1.0

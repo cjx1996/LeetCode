@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * @ClassName Copy_List_with_Random_Pointer_138
- * @Description TODO
+ * @Description
  * @Author cjx
  * @Date 2021/7/22 10:53
  * @Version 1.0

@@ -2,7 +2,7 @@ import org.junit.Test;
 
 /**
  * @ClassName Hamming_Distance_461
- * @Description TODO
+ * @Description
  * @Author cjx
  * @Date 2021/5/27 10:43
  * @Version 1.0

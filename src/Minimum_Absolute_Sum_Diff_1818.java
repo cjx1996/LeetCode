@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * @ClassName Minimum_Absolute_Sum_Diff_1818
- * @Description TODO
+ * @Description
  * @Author cjx
  * @Date 2021/7/14 17:11
  * @Version 1.0

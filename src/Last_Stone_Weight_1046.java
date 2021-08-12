@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 
 /**
  * @ClassName Last_Stone_Weight_1046
- * @Description TODO
+ * @Description
  * @Author cjx
  * @Date 2021/6/8 19:38
  * @Version 1.0

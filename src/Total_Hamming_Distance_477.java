@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 /**
  * @ClassName Total_Hamming_Distance_477
- * @Description TODO
+ * @Description
  * @Author cjx
  * @Date 2021/5/28 10:51
  * @Version 1.0

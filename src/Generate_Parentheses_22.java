@@ -11,7 +11,7 @@ import java.util.function.Function;
 public class Generate_Parentheses_22 {
 
     public List<String> generateParenthesis3(int n) {
-        List<String> ans=new ArrayList<String>();
+        List<String> ans=new ArrayList<>();
         backtrack(ans,new StringBuilder(),0,0,n);
         return ans;
     }
@@ -24,7 +24,6 @@ public class Generate_Parentheses_22 {
             cur.append('(');
             backtrack(ans,cur,open+1,close,n);
             cur.deleteCharAt(cur.length()-1);
-
         }
         if(close<open){  //左括号数目大于右括号数目
             cur.append(')');
@@ -36,12 +35,7 @@ public class Generate_Parentheses_22 {
 
 
 
-    @Test
-    public void test3() {
-        List<String> result = generateParenthesis3(4);
-        System.out.println(result.size());
-        System.out.println(result);
-    }
+
 
     public int bits(int n) {
         int res = 0;
@@ -94,6 +88,7 @@ public class Generate_Parentheses_22 {
 
     }
 
+    //动态规划
     public List<String> generateParenthesis1(int n) {
 
         List<List<String>> ans = new ArrayList<>();
@@ -125,6 +120,11 @@ public class Generate_Parentheses_22 {
         System.out.println(result.size());
         System.out.println(result);
     }
-
+    @Test
+    public void test3() {
+        List<String> result = generateParenthesis3(4);
+        System.out.println(result.size());
+        System.out.println(result);
+    }
 
 }
