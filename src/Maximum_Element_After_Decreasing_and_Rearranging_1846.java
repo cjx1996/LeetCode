@@ -13,6 +13,8 @@ public class Maximum_Element_After_Decreasing_and_Rearranging_1846 {
         int[] arr = new int[]{100,1,1000};
         System.out.println(maximumElementAfterDecrementingAndRearranging(arr));
     }
+
+
     public int maximumElementAfterDecrementingAndRearranging(int[] arr){
         int n = arr.length;
         int miss = 0 ;

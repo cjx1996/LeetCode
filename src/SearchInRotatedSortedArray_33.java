@@ -2,7 +2,7 @@ import org.junit.Test;
 
 /**
  * @ClassName SearchInRotatedSortedArray_33
- * @Description
+ * @Description TODO
  * @Author cjx
  * @Date 2021/4/7 16:44
  * @Version 1.0
@@ -18,38 +18,60 @@ public class SearchInRotatedSortedArray_33 {
      */
     public int search(int[] nums, int target) {
 
-        int n = nums.length;
-        if(n==0) return -1;
-        if(n==1) return (nums[0]==target)?0:-1;
-        int l =0,r=n-1;
-        while(l<=r){
-            int mid = l+(r-l)/2+1;
-            if(target==nums[mid]) return mid;
-            if(nums[mid]>=nums[l]){
-                if(target>=nums[l]&&target<nums[mid]) r=mid-1;
-                else{
-                    l = mid+1;
-                }
-            }else{
-                if(target>nums[mid]&&target<=nums[r]){
-                    l = mid+1;
-                }else{
-                    r=mid-1;
-                }
+        if (nums.length == 1) {
+            if (target == nums[0]) {
+                return 0;
+            } else {
+                return -1;
             }
         }
-        return -1;
+        return searchIndex(nums, 0, nums.length - 1, target);
 
     };
 
+    private int searchIndex(int[] nums, int left, int right, int target) {
 
+        if (right == left + 1) {
+            if (target == nums[left]) {
+                return left;
+            } else if (target == nums[right]) {
+                return right;
+            }else {
+                return -1;
+            }
+        }
+        int mid = (right + left) / 2;
+        if (target == nums[mid]) {
+            return mid;
+        };
+        if (nums[mid] > nums[left]) {
+            if (target >= nums[left] && target < nums[mid]) {
+                return searchIndex(nums, left, mid, target);
+            } else {
+                return searchIndex(nums, mid, right, target);
+            }
+        };
+        if (nums[mid] < nums[right]) {
+            if (target > nums[mid] && target <= nums[right]) {
+                return searchIndex(nums, mid, right, target);
+            } else {
+                return searchIndex(nums, left, mid, target);
+            }
+        };
+        return -1;
+
+
+    }
 
     @Test
     public void test() {
-        int[] nums = {3,1};
+        int[] nums = {4,5,6,7,0,1,2};
         int target = 1;
         int index = search(nums, target);
         System.out.println(index);
     }
-
+    @Test
+    public void test2(){
+        System.out.println(-5%2);
+    }
 }

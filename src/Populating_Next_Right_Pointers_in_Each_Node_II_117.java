@@ -62,7 +62,11 @@ public class Populating_Next_Right_Pointers_in_Each_Node_II_117 {
         return root;
     }
 
-     private class Node {
+
+
+
+    }
+     class Node {
         public int val;
         public Node left;
         public Node right;
@@ -70,10 +74,7 @@ public class Populating_Next_Right_Pointers_in_Each_Node_II_117 {
 
         public Node() {
         }
-
         public Node(int _val) {
             val = _val;
         }
-    }
-
 }

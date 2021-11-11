@@ -62,30 +62,11 @@ public class test {
     }
 
     @Test
-    public void test() {
-        int[] piles = new int[]{5, 4, 9};
-        int k = 2;
-        System.out.println(minStoneSum(piles, k));
+    public void test6() {
+        System.out.println(1/Math.pow(10,2)*Math.pow(10,1));
     }
 
-    public int minStoneSum(int[] piles, int k) {
-        PriorityQueue<Integer> queue = new PriorityQueue<>((a, b) ->b-a);
-        int n = piles.length;
-        for (int i = 0; i < n; i++) {
-            queue.offer(piles[i]);
-        }
-        for (int i = 0; i < k; i++) {
 
-            int sub = queue.peek() >> 1;
-            queue.offer(queue.poll() - sub);
-        }
-        int sum = 0;
-        for (int i = 0; i < n; i++) {
-            sum += queue.poll();
-        }
-        return sum;
-
-    }
 
 
 }
