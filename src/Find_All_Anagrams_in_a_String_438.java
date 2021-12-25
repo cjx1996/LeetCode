@@ -7,7 +7,7 @@ import java.util.prefs.PreferenceChangeEvent;
 
 /**
  * @ClassName Find_All_Anagrams_in_a_String_438
- * @Description
+ * @Description slicing window
  * @Author cjx
  * @Date 2021/7/19 18:10
  * @Version 1.0
