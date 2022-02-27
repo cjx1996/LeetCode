@@ -10,6 +10,14 @@ import java.util.*;
  * @Version 1.0
  */
 public class test {
+
+    @Test
+    public void testArrayInc() {
+        int[] a = new int[10];
+        a[0]++;
+        System.out.println(a[0]);
+    }
+
     @Test
     /**
      * 对于数组，对于具体数据的访问与存储可以将其看做对象来考虑
@@ -63,10 +71,8 @@ public class test {
 
     @Test
     public void test6() {
-        System.out.println(1/Math.pow(10,2)*Math.pow(10,1));
+        System.out.println(1 / Math.pow(10, 2) * Math.pow(10, 1));
     }
-
-
 
 
 }
