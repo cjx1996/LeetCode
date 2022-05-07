@@ -17,7 +17,7 @@ public class Subarray_Product_Less_Than_K_713 {
     }
 
     public int numSubarrayProductLessThanK(int[] nums, int k) {
-        if(k<1) return 0;
+        if(k<=1) return 0;
         int l = 0, r = 0;
         int len = nums.length;
         int ans = 0;
