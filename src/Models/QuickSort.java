@@ -46,22 +46,27 @@ public class QuickSort {
         int key = nums[star];
         while (i < j) {
             //这里必须先自减j不能先自增i
+            //从右向左找出第一个比key小的数据
             while (i < j && nums[j] > key) {
                 j--;
             }
+            //这里和上面必须有一个是有等号的
+            //从左向右找到第一个比key大的数据
             while (i < j && nums[i] <= key) {
                 i++;
             }
+            //没有过界则交换
             if (i < j) {
                 int temp = nums[i];
                 nums[i] = nums[j];
                 nums[j] = temp;
             }
         }
+        //将分界值与当前指针数据交换
         nums[star] = nums[i];
         nums[i] = key;
+        //对左右两边数组进行排序
         quickSort(nums, star, i - 1);
         quickSort(nums, i + 1, end);
     }
-//10万个数的数组，耗时：50毫秒
 }
