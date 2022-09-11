@@ -23,8 +23,10 @@ public class QuickSort {
             nums[i]=(int)(Math.random()*800);
         }*/
         int[] nums=new int[]{10,20,30,0,50,55,2,22};
-        sort.sort(nums);
-        for (int i : nums) {
+
+        int[] arr=new int[]{3,5,1,6,7,-1};
+        sort.sort(arr);
+        for (int i : arr) {
             System.out.println(i);
         }
     }
