@@ -15,6 +15,10 @@ public class Long_Range {
         long a=24*60*60*1000*1000; //这里发生了int类型溢出，实际执行过程中是几个int数先相乘，发生了int数值溢出后又将溢出的值赋给了long类型变量a
         System.out.println(a);
         System.out.println(a/1000/1000/60/60);
+        int b = Integer.MAX_VALUE;
+        System.out.println(b);
+        b++;
+        System.out.println(b);
     }
 
 }

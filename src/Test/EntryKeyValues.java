@@ -3,6 +3,8 @@ package Test;
 import org.junit.Test;
 
 import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @ClassName EntryKeyValues
@@ -14,12 +16,10 @@ import java.io.*;
 public class EntryKeyValues {
     public static void main(String[] args) {
 
-
     }
     @Test
     public void test(){
         String pathname="C:/Users/11212/Downloads/1.txt";
-
         try {
             byte[] bts= readFromByteFile(pathname);
             for (byte bt : bts) {
