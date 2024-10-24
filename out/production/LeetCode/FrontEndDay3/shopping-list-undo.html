@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Shopping list example</title>
+        <style>
+            li {
+                margin-bottom: 10px;
+            }
+
+            li button {
+                font-size: 8px;
+                margin-left: 20px;
+                color: #666;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>My shopping list</h1>
+
+        <div>
+            <label for="item">Enter a new item:</label>
+            <input type="text" name="item" id="item">
+            <button id="submit-btn">Add item</button>
+        </div>
+
+        <ul>
+            <!--<li>
+              <span>输入框的值</span>
+              <button>删除</button>
+            </li>-->
+        </ul>
+
+        <script>
+            // TODO 补充js代码 先获取DOM对象 事件绑定 事件逻辑编写
+            var addBtn = document.querySelector("#submit-btn");
+            addBtn.addEventListener('click', function () {
+                var text = document.querySelector("#item").value;
+                if (!text||text === null) {
+                    alert("输入值不能为空");
+                } else {
+                    var ul = document.querySelector("ul");
+                    // 创建一个新的<li>节点
+                    var newListItem = document.createElement("li");
+
+                    // 创建要添加到<li>节点中的文本内容
+                    var textNode = document.createTextNode(text);
+
+                    // 将文本内容添加到<li>节点中
+                    newListItem.appendChild(textNode);
+
+                    // 创建删除按钮
+                    var deleteButton = document.createElement("button");
+                    deleteButton.textContent = "删除";
+                    deleteButton.addEventListener("click", function() {
+                        // 点击删除按钮时从<ul>节点中删除当前<li>节点
+                        newListItem.remove();
+                    });
+
+                    // 将删除按钮添加到<li>节点中
+                    newListItem.appendChild(deleteButton);
+
+                    // 将新的<li>节点添加到<ul>节点中
+                    ul.appendChild(newListItem);
+                    document.querySelector("#item").value=null;
+                    document.querySelector("#item").focus();
+                }
+            })
+        </script>
+    </body>
+</html>
